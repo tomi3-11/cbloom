@@ -45,17 +45,16 @@ BloomFilter *bloom_create(uint64_t capacity, double error_rate)
 
     // optimal m and k from the standard formulas
     double ln2 = log(2.0);
-    uint64_t m = (uint64_t)ceil(-((double)capacity * log(error_rate))
-                    / (ln2 * ln2);
+    uint64_t m = (uint64_t)ceil(-((double)capacity * log(error_rate)) / (ln2 * ln2));
     uint32_t k = (uint32_t)ceil((double)m / (double)capacity * ln2);
 
-    BloomFilter *bf = mallac(sizeof(BloomFilter));
+    BloomFilter *bf = malloc(sizeof(BloomFilter));
     if (!bf) return NULL;
 
     // bit_array: m bits packed into ceil(m/8) bytes, zero-initialised
     uint64_t bytes = (m +7) / 8;
     bf->bit_array = calloc(bytes, 1);
-    if (!bf->bit_array) { free(bf); return NULL }
+    if (!bf->bit_array) { free(bf); return NULL; }
 
     bf->bit_count = m;
     bf->hash_count = k;
