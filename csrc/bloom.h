@@ -1,5 +1,5 @@
 #ifndef BLOOM_H
-#define BOOM_H
+#define BLOOM_H
 
 #include <stdint.h>
 #include <stdlib.h>
