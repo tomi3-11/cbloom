@@ -123,7 +123,7 @@ PyMODINIT_FUNC PyInit__cbloom(void)
 
     // Add BloomFilter class to the module
     Py_INCREF(&PyBloomType);
-    if (PyModule_AddObject(m, "BloomFilter", (PyObject*)&PyBloomtype) < 0){
+    if (PyModule_AddObject(m, "BloomFilter", (PyObject*)&PyBloomType) < 0){
         Py_DECREF(&PyBloomType);
         Py_DECREF(m);
         return NULL;

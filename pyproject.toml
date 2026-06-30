@@ -1,6 +1,6 @@
 [build-system]
 requires = ["setuptools>=64"]
-build-backend = "setuptools.backends.legacy:build"
+build-backend = "setuptools.build_meta"
 
 [project]
 name = "cbloom"
@@ -11,7 +11,7 @@ authors = [
     { name = "tom", email = "didymusthomas6@gmail.com" }
 ]
 requires-python = ">=3.13"
-license = { text = "MIT" }
+license = "MIT"
 dependencies = []
 
 [tool.setuptools.packages.find]
@@ -20,7 +20,7 @@ where = ["src"]
 [tool.setuptools.package-dir]
 "" = "src"
 
-[dependency-groups]
+[project.optional-dependencies]
 dev = [
     "pytest>=9.1.1",
     "ruff>=0.15.20",
