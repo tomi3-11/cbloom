@@ -1,4 +1,4 @@
-from setuptools import setup, Extension
+from setuptools import Extension, setup
 
 bloom_ext = Extension(
     name="_cbloom", # the import name
