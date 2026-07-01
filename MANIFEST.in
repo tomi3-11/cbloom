@@ -1,0 +1,3 @@
+include csrc/bloom.h
+include csrc/bloom.c
+include csrc/bloommodule.c
