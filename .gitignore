@@ -6,5 +6,9 @@ dist/
 wheels/
 *.egg-info
 
+# compiled C extension
+*.so
+*pyd
+
 # Virtual environments
 .venv
