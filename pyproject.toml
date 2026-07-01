@@ -31,3 +31,10 @@ line-length = 88
 
 [tool.ruff.lint]
 select = ["E", "F", "I"]
+
+[dependency-groups]
+dev = [
+    "pybloom-live>=4.0.0",
+    "pybloomfiltermmap3",
+    "rbloom>=1.5.4",
+]

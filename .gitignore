@@ -18,3 +18,5 @@ __pycache__/
 # makefile artifacts
 csrc/*.o
 csrc/test_c
+
+benchmarks/*
