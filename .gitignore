@@ -10,5 +10,11 @@ wheels/
 *.so
 *pyd
 
-# Virtual environments
-.venv
+# python
+__pycache__/
+*.pyc
+.venv/
+
+# makefile artifacts
+csrc/*.o
+csrc/test_c
